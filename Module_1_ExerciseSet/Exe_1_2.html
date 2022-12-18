@@ -11,7 +11,9 @@
   <script>
       'use strict';
       name = prompt('Hellow, please enter you name: ');
-      document.querySelector('#target').innerHTML = 'Hello, ' + name + '!'
+      if (name != null) {
+        document.querySelector('#target').innerHTML = 'Hello, ' + name + '!';
+      }
 
   </script>
 
