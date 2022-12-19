@@ -6,6 +6,14 @@ const numPart = parseInt(prompt("Enter total number of participants: "));
 for (let i=0; i <=numPart; i++){
   listPart[i] = prompt("Enter the name of participants: ");
 }
-gun = listPart.sort();
-document.getElementById("Order").innerText= "Participant ordered list:" + gun;
+            //This will sort them alphabetically
+nameSort = listPart.sort();
+
+              //This will list the items orderly in Html
+
+let list =document.getElementById("Order");
+for (let i =0; i<nameSort.length; i++) {
+  var li = document.createElement("li");
+  li.innerText=nameSort[i];
+  list.appendChild(li)}
 
