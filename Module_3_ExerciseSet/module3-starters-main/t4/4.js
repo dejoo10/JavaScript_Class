@@ -18,6 +18,9 @@ const get = document.getElementById("target");
 
 for (let i = 0; i<students.length; i++) {
   var option = document.createElement('option');
-  option.innerHTML=students[i];
+  option.innerHTML=students[i].name;
   get.appendChild(option)
+
+
+
 }
