@@ -1,16 +1,20 @@
 
-let year = parseInt(prompt("Enter the year: "));
+//This will test if it is a leap year or not//
 function leapyear(year){
 
     if (year % 100 === 0) {
       if((year % 400 ===0)){
-        document.getElementById("Year").innerText= "Year, " + year + "is leap year"
+        document.getElementById("Year").innerText= "Year, " + year + "! is leap year"
       }
     } else if (year % 4 === 0) {
       document.getElementById("Year").innerText = "Year, " + year +
-          "is a leap year";
+          "! is a leap year";
     }else{
-      document.getElementById("Year").innerText= "Year, "+ year + "is not a leap year";
+      document.getElementById("Year").innerText= "Year, "+ year + "! is not a leap year";
 
     }
   }
+  //user enter the year to check//
+let year = parseInt(prompt("Enter the year: "));
+
+leapyear(year)
