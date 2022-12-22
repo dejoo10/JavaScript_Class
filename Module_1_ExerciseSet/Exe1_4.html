@@ -2,33 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Exercise 4</title>
 </head>
 <body>
+    <h1>The selection will be printed on this page</h1>
+    <p id="target" style="color: blue"></p>
     <script>
         'use strict';
-   //     let classh;
- //       name = prompt("Enter your name")
-
+// this random function will generate number between 0-3//
         function getAssigned(max) {
-            return Math.floor(Math.random() * max);
-
-
+          return Math.floor(Math.random() * max);
        }
-        document.querySelector('#target').innerHTML = 'Hello, ' + getAssigned(5) + '!'
- //      console.log(getAssigned(5));
-   //      name = prompt("Enter your name")
- //       if (getAssigned(1,5) == 1) {
-//            classh = "gryffindor";
-
- //       } else if (getAssigned(1,5) == 2) {
- //           classh = "slytherin";
- //       } else if (getAssigned(1,5) == 3) {
- //           classh = "hufflepuff";
- //       } else if (getAssigned(1,5) == 4) {
- //           classh = "ravenclaw";
- //       }
-  //      console.log(`You are assigned to class ${classh}!`)
+       //console.log(getAssigned(3)); //
+         name = prompt("Enter your name") //here user enter name//
+        //the number generated is used to select a room in any of these options//
+        let call = getAssigned(3)
+          if (call === 1) {
+            let arri = "gryffindor";
+            document.getElementById("target").innerHTML= "Hello"+ " " +name +" you belong to ===>" + arri +"class";
+          } else if (call === 2) {
+            let arri = "slytherin";
+            document.getElementById("target").innerHTML= "Hello"+ " "+ name +" you belong to ===>" + arri +"class";
+           } else if (call === 3) {
+            let arri = "hufflepuff";
+            document.getElementById("target").innerHTML= "Hello"+ " "+ name +" you belong to ===>" + arri +"class";
+          } else if (call === 0) {
+            let arri = "ravenclaw";
+            document.getElementById("target").innerHTML= "Hello"+ " "+ name +" you belong to ===>" + arri + "class";
+          } else {
+            document.getElementById("target").innerHTML= "Hello"+ " "+ name +" you are not assigned";
+          }
     </script>
 
 </body>
