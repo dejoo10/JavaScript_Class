@@ -1,29 +1,29 @@
 
 
-var st_year = parseInt(prompt("Enter start year"));
-var end_year = parseInt(prompt("Enter end year"));
+var yearStart = parseInt(prompt("Enter start year"));
+var yearEnd = parseInt(prompt("Enter end year"));
 
-function leap_year_range(st_year, end_year) {
+document.getElementById("Leap").innerText="Leap years, " + leapYear_range(yearStart, yearEnd);
+console.log(leapYear_range(yearStart, yearEnd))
+
+function leapYear_range(yearStart, yearEnd) {
   let year_range = [];
-  for (let i = st_year; i <= end_year; i++)
+  for (let i = yearStart; i <= yearEnd; i++)
   {
     year_range.push(i);
   }
-  var new_array = [];
+  let new_array = [];
 
   year_range.forEach(
-      function(year)
-      {
-        if(test_LeapYear(year))
+      function(year) {
+        if(LeapYears(year))
           new_array.push(year);
       }
 
   );
-
   return new_array;
 }
-
-function test_LeapYear(year) {
+function LeapYears(year) {
   if ((Year % 4 ===0 && year % 100 !== 0) || (year % 100 === 0 && year % 400 ===0)) {
     return year;
   } else {
@@ -31,4 +31,4 @@ function test_LeapYear(year) {
   }
 }
 
-document.getElementById("Leap").innerText="Leap years, " + leap_year_range(st_year, end_year);
+
