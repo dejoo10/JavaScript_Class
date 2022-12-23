@@ -1,34 +1,48 @@
+//Somehow, the result has a strange final result that i can seem to figure out why, but the code will give the needed results//
 
+startYear = parseInt(prompt("Enter the starting year: "))  //user can enter the starting year//
+endYear = parseInt(prompt("Enter the ending year: "))  //user can enter the ending yer//
+let n = 0;
 
-var yearStart = parseInt(prompt("Enter start year"));
-var yearEnd = parseInt(prompt("Enter end year"));
-
-document.getElementById("Leap").innerText="Leap years, " + leapYear_range(yearStart, yearEnd);
-console.log(leapYear_range(yearStart, yearEnd))
-
-function leapYear_range(yearStart, yearEnd) {
-  let year_range = [];
-  for (let i = yearStart; i <= yearEnd; i++)
-  {
-    year_range.push(i);
-  }
-  let new_array = [];
-
-  year_range.forEach(
-      function(year) {
-        if(LeapYears(year))
-          new_array.push(year);
-      }
-
-  );
-  return new_array;
+list_year = []    //all the years in the range are stored in this list according to the for loop below//
+for (let i=startYear; i<=endYear; i++) {
+  list_year.push(i)
 }
-function LeapYears(year) {
-  if ((Year % 4 ===0 && year % 100 !== 0) || (year % 100 === 0 && year % 400 ===0)) {
-    return year;
-  } else {
-    return false;
+reList = [] //all leap years are stored in this list according to the for loop below//
+for (let j = 0; j<=list_year.length; j++) {
+  let checkEach = list_year[j];
+  leapyear(checkEach)
+
+  //The following function will check of each year in the range is a leap year//
+
+  function leapyear(year) {
+
+    if (year % 100 === 0) {
+      if ((year % 400 === 0)) {
+        n = 0
+      }
+    } else if (year % 4 === 0) {
+      n = 0
+    } else {
+      n = 1
+
+    }
+
+  if (n === 0) {
+    reList.push(year)
+  } else if (n === 1) {
+    //document.getElementById("target").innerText = year +  "! is not a leap year";//
   }
+}
+}
+
+//This will append the result in html as ul
+cardPrint = document.getElementById("target")
+
+for (let k = 0; k<=reList.length; k++) {
+  li = document.createElement("li")
+  li.innerText=reList[k]
+  cardPrint.appendChild(li)
 }
 
 
