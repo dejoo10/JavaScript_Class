@@ -1,4 +1,3 @@
-//Somehow, the result has a strange final result that i can seem to figure out why, but the code will give the needed results//
 
 startYear = parseInt(prompt("Enter the starting year: "))  //user can enter the starting year//
 endYear = parseInt(prompt("Enter the ending year: "))  //user can enter the ending yer//
@@ -39,7 +38,7 @@ for (let j = 0; j<=list_year.length; j++) {
 //This will append the result in html as ul
 cardPrint = document.getElementById("target")
 
-for (let k = 0; k<=reList.length; k++) {
+for (let k = 0; k<reList.length; k++) {
   li = document.createElement("li")
   li.innerText=reList[k]
   cardPrint.appendChild(li)

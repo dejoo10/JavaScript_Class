@@ -17,10 +17,12 @@ const students = [
 const get = document.getElementById("target");
 
 for (let i = 0; i<students.length; i++) {
+  let nameT =students[i].name;
+  let valueT = students[i].id;
+
   var option = document.createElement('option');
-  option.innerHTML=students[i].name;
-  get.appendChild(option)
-
-
+  option.text=nameT;
+  option.value=valueT;
+  get.appendChild(option);
 
 }
