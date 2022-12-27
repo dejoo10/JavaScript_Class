@@ -1,6 +1,6 @@
 
 
-const user = parseInt(prompt("Enter a positive number: "));
+const user = parseInt(prompt("Enter a positive number: ")); //user enter number here//
 let n = 0
 
 //This function test if it is a prime number or not//
