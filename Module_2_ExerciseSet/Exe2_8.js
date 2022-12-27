@@ -1,24 +1,13 @@
 
-//function concat(arr,b) {
-  //for (let i = 0; i <= b; i++){
-    //con = arr[i]
+let list = ["James", "John", "Femi", "Kings", "sola"]
 
-  //}
-//}
-//let list = ["James", "John", "Femi", "Kings", "sola"]
-//let c = list.length
-//gun = concat(list,c);
-
-function Sum(){
-  for (i=0; i<10; i++){
-    message = "I love you";
-    con = message
-    //document.getElementById("Show").innerHTML=con
-    console.log(con)
+function concat() {
+  for (let i = 0; i <= list.length; i++){
+    con = list[i]
   }
-  document.getElementById("Show").innerHTML=con
-}
-Sum()
+  matched = concat()
+  document.getElementById("Show").innerHTML=matched;
 
-//console.log(gun);
-//document.getElementById("Show").innerHTML=gun;
+}
+//let list = ["James", "John", "Femi", "Kings", "sola"]
+
